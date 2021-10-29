@@ -1,0 +1,176 @@
+/* General */
+
+@import url('https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body, html { 
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin: 0; 
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+}
+
+.error-display {
+  font-size: 2rem;
+  text-align: center;
+  width: 75%;
+}
+
+/* Header */
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  font-size: 6rem;
+  text-align: center;
+  font-family: 'MedievalSharp', cursive;
+  margin-top: -3.4rem;
+  text-transform: uppercase;
+}
+
+h2.supratitle {
+  /* text-align: center; */
+  font-family: 'MedievalSharp', cursive;
+  font-size: 2.5rem;
+  margin-top: 5rem;
+  margin-left: -45rem;
+  line-height: 0;
+}
+
+h2.subtitle {
+  font-family: 'MedievalSharp', cursive;
+  font-size: 3rem;
+  color: red;
+  line-height: .1;
+  margin-top: -3rem;
+  text-align: center;
+}
+
+.letter-l, .letter-r {
+  font-size: 9rem;
+}
+
+#home {
+  /* font-family: 'MedievalSharp', cursive; */
+  margin-left: -41rem;
+}
+
+#home:hover {
+  /* font-family: 'MedievalSharp', cursive; */
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+h4 {
+  font-size: 1.3rem;
+  /* letter-spacing: 2px; */
+}
+
+/* Main */
+
+.border {
+  border-top: 1px solid red;
+  margin-top: 2rem;
+}
+
+.search-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20%;
+  border: 1px solid;
+  width: 550px;
+  border-radius: 10px;
+}
+
+input {
+  width: 400px;
+  height: 80px;
+  /* border-radius: 10px; */
+  border: none;
+  padding: 20px;
+  margin: 20px;
+  z-index: 999;
+}
+
+input[type="text"] {
+  font-size: 2rem;
+}
+
+#button {
+  width: 60px;
+  height: 60px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 2rem;
+}
+
+h3 {
+  font-family: 'MedievalSharp', cursive;
+  font-size: 4rem;
+  line-height: .1;
+  text-align: center;
+}
+
+.book-cover {
+  height: 100%;
+}
+
+.book-result {
+  width: 125%;
+}
+
+.book-result_inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.chapter-positioning {
+  margin-bottom: 8rem;
+}
+
+li {
+  padding: 10px;
+  font-size: 1.2rem;
+}
+
+#result {
+  display: flex;
+  justify-content: center;
+}
+
+/* Footer */
+
+footer {
+  align-items: center;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  height: 100px;
+  left: 0;
+  position: fixed;
+  right: 0;
+  z-index: 150;
+}
+
+footer p {
+  text-align: center;
+  font-family: 'MedievalSharp', cursive;
+}
+
+
+
