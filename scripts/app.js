@@ -1,5 +1,6 @@
 const init = () => {
 
+  // Main button that needs to be accessed, so bookSearch function can be triggered.
   const button = document.getElementById('button')
   let search
   let result
@@ -44,7 +45,7 @@ const init = () => {
           }) 
         }
       } catch {
-        handleError('Oops! Something has gone wrong.')
+        handleError('Oops! Something has gone wrong.')                    // If API is not working, display a message.
       }
     }
 
@@ -81,7 +82,7 @@ const init = () => {
         const borderMain = document.querySelector('main')
         borderMain.classList.add('border')
 
-        // Creating homeButton
+        // Dynamically created homeButton
         const header = document.querySelector('header')
         const homeButton = document.createElement('h4')
         homeButton.setAttribute('id', 'home')
@@ -94,6 +95,7 @@ const init = () => {
           location.reload()
         })
 
+        // Another way to dynamically creating DOM elements with `` aka template literals.
         return (
           `<div class="book-result">
             <h3>${item.name}</h3>
@@ -115,24 +117,27 @@ const init = () => {
     // Showing chapters
     let chapters = []
 
+    // Get all chapters with async function
     const getChapters = async() => {
       try {
         const result = await getAllBooksAsync()
         const id = result.map(item => item._id)
         const req = await fetch(searchURL + id + '/chapter', headers)
         chapters = await req.json()
-        // console.log('chapters >>>', chapters)
         displayChapter()
       } catch {
         handleError('Oops! Something has gone wrong!')
       }
     }
 
+    // Creating a div and setAttribute
     const container = document.createElement('div')
     container.setAttribute('class', 'chapter-container')
 
+    // Had to put it out of map otherwise it would create an ol on each iteration.
     const list = document.createElement('ol')
 
+    // Display chapter with dynamically created DOM elements
     const displayChapter = () => {
       const particularChapterArray = chapters.docs.map(item => {
         const chapterResult = document.querySelector('.chapter-positioning')
